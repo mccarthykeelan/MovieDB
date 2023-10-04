@@ -7,7 +7,7 @@ const ctrlOthers = require("../controllers/others");
 
 /* Movies Pages */
 
-router.get("/", ctrlMovies.homelist);
+router.get("", ctrlMovies.home);
 router.get("/movie", ctrlMovies.movieInfo);
 router.get("/movie/review/new", ctrlMovies.addReview);
 

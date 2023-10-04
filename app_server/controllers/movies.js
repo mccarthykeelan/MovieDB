@@ -22,5 +22,5 @@ const addReview = function(req, res) {
 module.exports = {
     home,
     movieInfo,
-    addReview
+    addReview,
 }

@@ -2,10 +2,10 @@
 
 const about = function(req, res) {
     res.render("index", {
-        title: "Express"
+        title: "About"
     });
 };
 
 module.exports = {
-    about
+    about,
 };
