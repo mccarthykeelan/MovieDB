@@ -2,9 +2,17 @@ const express = require('express');
 const router = express.Router();
 
 
-const ctrlMain = require("../controllers/main");
+const ctrlMovies = require("../controllers/movies");
+const ctrlOthers = require("../controllers/others");
 
-/* GET home page. */
-router.get("/", ctrlMain.index);
+/* Movies Pages */
+
+router.get("/", ctrlMovies.homelist);
+router.get("/movie", ctrlMovies.movieInfo);
+router.get("/movie/review/new", ctrlMovies.addReview);
+
+/* Other Pages */
+router.get("/about", ctrlOthers.about);
+
 
 module.exports = router;
