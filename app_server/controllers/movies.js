@@ -7,14 +7,14 @@ const home = function(req, res) {
 
 /* GET 'Movie Info' page */
 const movieInfo = function(req, res) {
-    res.render("index", {
+    res.render("movie-detail", {
         title: "Movie Info"
     });
 };
 
 /* GET 'Add Review' page */
 const addReview = function(req, res) {
-    res.render("index", {
+    res.render("add-review", {
         title: "Add Review"
     });
 };

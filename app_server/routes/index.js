@@ -13,6 +13,7 @@ router.get("/movie/review/new", ctrlMovies.addReview);
 
 /* Other Pages */
 router.get("/about", ctrlOthers.about);
+router.get("/register", ctrlOthers.register);
 
 
 module.exports = router;

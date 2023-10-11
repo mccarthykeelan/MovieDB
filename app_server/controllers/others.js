@@ -6,6 +6,13 @@ const about = function(req, res) {
     });
 };
 
+const register = function(req, res) {
+    res.render("register", {
+        title: "Register"
+    });
+};
+
 module.exports = {
     about,
+    register,
 };

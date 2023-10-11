@@ -1,5 +1,248 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  main(style="max-width: 1300px").mx-auto
+    section#hero.d-flex.w-100.align-items-center
+      .content.w-100
+        .content-wrapper.py-3.px-5
+          .title 
+            h2.display-4  Welcome
+            h3.display-5 Millions of movies, TV shows and people to discover. Explore now.
+          .search
+            form.inner-search-form.mt-5(action="")
+              .d-inline-block.position-relative.w-100
+                label(for="").w-100
+                  input(type="text" placeholder="Search for a movie").form-control.form-control-lg
+                button.btn.btn-lg.btn-primary.position-absolute.end-0.h-100 Search
+                
+    section#top-rated.d-flex.w-100.align-items-center
+      .content.w-100.pt-3
+        .content-wrapper.py-3.px-5
+          .section__title
+            h2 Top Rated
+          .section__content
+            .slider.d-flex.py-3
+              .card.text-dark.border-0.ml-1
+                a(href="#") 
+                  img.card-img(src='https://source.unsplash.com/random/1000x300', alt='')
+                h2.card-title
+                  a(href="#") Loki
+                p.release-date
+                  | Jun 09, 2021
+              .card.text-dark.border-0.ml-1
+                a(href="#") 
+                  img.card-img(src='https://source.unsplash.com/random/1000x300', alt='')
+                h2.card-title
+                  a(href="#") Loki
+                p.release-date
+                  | Jun 09, 2021
+              .card.text-dark.border-0.ml-1
+                a(href="#") 
+                  img.card-img(src='https://source.unsplash.com/random/1000x300', alt='')
+                h2.card-title
+                  a(href="#") Loki
+                p.release-date
+                  | Jun 09, 2021
+              .card.text-dark.border-0.ml-1
+                a(href="#") 
+                  img.card-img(src='https://source.unsplash.com/random/1000x300', alt='')
+                h2.card-title
+                  a(href="#") Loki
+                p.release-date
+                  | Jun 09, 2021
+              .card.text-dark.border-0.ml-1
+                a(href="#") 
+                  img.card-img(src='https://source.unsplash.com/random/1000x300', alt='')
+                h2.card-title
+                  a(href="#") Loki
+                p.release-date
+                  | Jun 09, 2021
+              .card.text-dark.border-0.ml-1
+                a(href="#") 
+                  img.card-img(src='https://source.unsplash.com/random/1000x300', alt='')
+                h2.card-title
+                  a(href="#") Loki
+                p.release-date
+                  | Jun 09, 2021
+              .card.text-dark.border-0.ml-1
+                a(href="#") 
+                  img.card-img(src='https://source.unsplash.com/random/1000x300', alt='')
+                h2.card-title
+                  a(href="#") Loki
+                p.release-date
+                  | Jun 09, 2021
+              .card.text-dark.border-0.ml-1
+                a(href="#") 
+                  img.card-img(src='https://source.unsplash.com/random/1000x300', alt='')
+                h2.card-title
+                  a(href="#") Loki
+                p.release-date
+                  | Jun 09, 2021
+              .card.text-dark.border-0.ml-1
+                a(href="#") 
+                  img.card-img(src='https://source.unsplash.com/random/1000x300', alt='')
+                h2.card-title
+                  a(href="#") Loki
+                p.release-date
+                  | Jun 09, 2021
+              
+
+    section#playing.d-flex.w-100.align-items-center
+      .content.w-100.pt-3
+        .content-wrapper.py-3.px-5
+          .section__title
+            h2 Now Playing
+          .section__content
+            .slider.d-flex.py-3
+              .card.text-dark.border-0.ml-1
+                a(href="#") 
+                  img.card-img(src='https://source.unsplash.com/random/1000x300', alt='')
+                h2.card-title
+                  a(href="#") Loki
+                p.release-date
+                  | Jun 09, 2021
+              .card.text-dark.border-0.ml-1
+                a(href="#") 
+                  img.card-img(src='https://source.unsplash.com/random/1000x300', alt='')
+                h2.card-title
+                  a(href="#") Loki
+                p.release-date
+                  | Jun 09, 2021
+              .card.text-dark.border-0.ml-1
+                a(href="#") 
+                  img.card-img(src='https://source.unsplash.com/random/1000x300', alt='')
+                h2.card-title
+                  a(href="#") Loki
+                p.release-date
+                  | Jun 09, 2021
+              .card.text-dark.border-0.ml-1
+                a(href="#") 
+                  img.card-img(src='https://source.unsplash.com/random/1000x300', alt='')
+                h2.card-title
+                  a(href="#") Loki
+                p.release-date
+                  | Jun 09, 2021
+              .card.text-dark.border-0.ml-1
+                a(href="#") 
+                  img.card-img(src='https://source.unsplash.com/random/1000x300', alt='')
+                h2.card-title
+                  a(href="#") Loki
+                p.release-date
+                  | Jun 09, 2021
+              .card.text-dark.border-0.ml-1
+                a(href="#") 
+                  img.card-img(src='https://source.unsplash.com/random/1000x300', alt='')
+                h2.card-title
+                  a(href="#") Loki
+                p.release-date
+                  | Jun 09, 2021
+              .card.text-dark.border-0.ml-1
+                a(href="#") 
+                  img.card-img(src='https://source.unsplash.com/random/1000x300', alt='')
+                h2.card-title
+                  a(href="#") Loki
+                p.release-date
+                  | Jun 09, 2021
+              .card.text-dark.border-0.ml-1
+                a(href="#") 
+                  img.card-img(src='https://source.unsplash.com/random/1000x300', alt='')
+                h2.card-title
+                  a(href="#") Loki
+                p.release-date
+                  | Jun 09, 2021
+              .card.text-dark.border-0.ml-1
+                a(href="#") 
+                  img.card-img(src='https://source.unsplash.com/random/1000x300', alt='')
+                h2.card-title
+                  a(href="#") Loki
+                p.release-date
+                  | Jun 09, 2021
+
+
+    section#popular.d-flex.w-100.align-items-center
+      .content.w-100.pt-3
+        .content-wrapper.py-3.px-5
+          .section__title
+            h2 Playing
+          .section__content
+            .slider.d-flex.py-3
+              .card.text-dark.border-0.ml-1
+                a(href="#") 
+                  img.card-img(src='https://source.unsplash.com/random/1000x300', alt='')
+                h2.card-title
+                  a(href="#") Loki
+                p.release-date
+                  | Jun 09, 2021
+              .card.text-dark.border-0.ml-1
+                a(href="#") 
+                  img.card-img(src='https://source.unsplash.com/random/1000x300', alt='')
+                h2.card-title
+                  a(href="#") Loki
+                p.release-date
+                  | Jun 09, 2021
+              .card.text-dark.border-0.ml-1
+                a(href="#") 
+                  img.card-img(src='https://source.unsplash.com/random/1000x300', alt='')
+                h2.card-title
+                  a(href="#") Loki
+                p.release-date
+                  | Jun 09, 2021
+              .card.text-dark.border-0.ml-1
+                a(href="#") 
+                  img.card-img(src='https://source.unsplash.com/random/1000x300', alt='')
+                h2.card-title
+                  a(href="#") Loki
+                p.release-date
+                  | Jun 09, 2021
+              .card.text-dark.border-0.ml-1
+                a(href="#") 
+                  img.card-img(src='https://source.unsplash.com/random/1000x300', alt='')
+                h2.card-title
+                  a(href="#") Loki
+                p.release-date
+                  | Jun 09, 2021
+              .card.text-dark.border-0.ml-1
+                a(href="#") 
+                  img.card-img(src='https://source.unsplash.com/random/1000x300', alt='')
+                h2.card-title
+                  a(href="#") Loki
+                p.release-date
+                  | Jun 09, 2021
+              .card.text-dark.border-0.ml-1
+                a(href="#") 
+                  img.card-img(src='https://source.unsplash.com/random/1000x300', alt='')
+                h2.card-title
+                  a(href="#") Loki
+                p.release-date
+                  | Jun 09, 2021
+              .card.text-dark.border-0.ml-1
+                a(href="#") 
+                  img.card-img(src='https://source.unsplash.com/random/1000x300', alt='')
+                h2.card-title
+                  a(href="#") Loki
+                p.release-date
+                  | Jun 09, 2021
+              .card.text-dark.border-0.ml-1
+                a(href="#") 
+                  img.card-img(src='https://source.unsplash.com/random/1000x300', alt='')
+                h2.card-title
+                  a(href="#") Loki
+                p.release-date
+                  | Jun 09, 2021
+
+
+    section#banner 
+      .container.col.px-5.py-4.text-white
+        .column__header
+          h2 Join today 
+        .column__content
+          .row
+            .col-12.col-md-7.order-last.order-md-first
+              p Get access to favourite movies, track what you've seen and search and filter for what to watch next—regardless if it's in theatres, on TV or available on popular streaming services like Netflix, Amazon Prime Video, Disney Plus, Hayu, and Apple TV Plus.
+              button.btn.btn-primary Sign Up
+            .col-12.col-md-5.order-first.order-md-last
+              ul
+                li Enjoy MovieReviewDB ad free
+                li Write reviews and give ratings on movies
+                li Log your favourite movies
+                li Contribute to and improve our database
