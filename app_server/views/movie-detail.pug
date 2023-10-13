@@ -1,4 +1,44 @@
 extends layout
 
 block content
-    h2 TEST
+    main.container-xxl.mx-auto 
+        .row
+            .col.poster_wrappers
+                .poster
+                    img(src="#", alt="IMAGE HERE")
+            .col.poster_info
+                .row 
+                    .col.poster_info__head
+                        .poster__title
+                            h2 Mission: Impossible - Dead Reckoning Part One
+                                span.release-date (2023)
+                            .facts 
+                        .poster__facts
+                    .col
+                        .poster__info
+                            h3.tagline We all share the same fate.
+                            h3 Overview
+                            .overview 
+                                p Ethan Hunt and his IMF team embark on their most dangerous mission yet: To track down a terrifying new weapon that threatens all of humanity before it falls into the wrong hands. With control of the future and the world's fate at stake and dark forces from Ethan's past closing in, a deadly race around the globe begins. Confronted by a mysterious, all-powerful enemy, Ethan must consider that nothing can matter more than his mission—not even the lives of those he cares about most.
+                            ol.people 
+                                li.profile
+                                    p Christopher McQuarrie
+                                    p.character Director, Writer
+                                li.profile
+                                    p Erik Jendresen
+                                    p Writer
+    section#social
+        .menu
+            h3
+            ul
+                li Reviews
+        .content 
+                .review
+                    .card
+                        .grouped
+                            .avatar
+                                img(src="", alt="Test")
+                            .review-info 
+                            .rating
+                                span.star-icon 7.0
+                            h3 Written by Brent Marchant on July 16, 2023
