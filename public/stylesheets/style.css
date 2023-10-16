@@ -132,3 +132,25 @@ section .card .card-img {
 .registeration_form .form-title {
   text-align: center;
 }
+
+.poster_img {
+  min-width: 300px;
+  width: 300px;
+}
+
+.people li {
+  width: 33%;
+}
+
+.tagline {
+  margin-bottom: 0;
+  font-size: 1.1em;
+  font-weight: 400;
+  font-style: italic;
+  opacity: .7;
+}
+
+.tagline + h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
