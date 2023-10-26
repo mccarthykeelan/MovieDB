@@ -8,13 +8,15 @@ html
     link(href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Source+Sans+3:wght@700&display=swap' rel='stylesheet')
     link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css')
     link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN' crossorigin='anonymous')
-    link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
+    link(rel='preconnect', href='https://fonts.googleapis.com')
+    link(rel='preconnect', href='https://fonts.gstatic.com', crossorigin='')
+    link(href='https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap', rel='stylesheet')
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
     header#header
       nav#nav.navbar.navbar-expand.navbar-dark.bg-dark.mx-auto
         .container-xxl
-          a.navbar-brand(href='#') MovieReviewDB
+          a.navbar-brand(href='/') MovieReviewDB
           // Button trigger modal
           ul.navbar-nav.me-auto.mb-lg-0.w-100.justify-content-between.align-items-center
             li.nav-item.dropdown
@@ -34,7 +36,7 @@ html
                       h1#accountModalLabel.modal-title.fs-5.w-100.text-center Account Details
                       button.btn-close.btn-close-white.btn-close--user(type='button' data-bs-dismiss='modal' aria-label='Close')
                     .modal-body.d-flex.flex-column
-                      button.btn.btn-success.w-100.mb-3(type='button' data-bs-dismiss='modal') Favourite
+                      button.btn.btn-success.w-100.mb-3(type='button' data-bs-dismiss='modal' href="/movie/favourite") Favourite
                       button.btn.btn-warning.w-100.mb-3(type='button' data-bs-dismiss='modal') Reviews
                       button.btn.btn-info.w-100(type='button' data-bs-dismiss='modal') Account Settings
                     .modal-footer.border-top-0
@@ -57,8 +59,8 @@ html
                           a(href="/register") Don't have an account? Register here!
                         .form-group.mt-2
                           button.btn.btn-primary.w-100(type='button' data-bs-dismiss='modal') Login
-   
-    block content
+    main
+      block content
 
     footer#footer.d-flex.flex-wrap.justify-content-between.align-items-center.py-3.my-4.border-top(style="max-width: 1300px; margin: auto")
       .col-md-4.d-flex.align-items-center

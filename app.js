@@ -1,3 +1,5 @@
+require('./app_server/models/db');
+
 let createError = require('http-errors');
 let express = require('express');
 let path = require('path');

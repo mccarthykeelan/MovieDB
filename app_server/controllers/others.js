@@ -1,10 +1,4 @@
-/* GET home page */
-
-const about = function(req, res) {
-    res.render("index", {
-        title: "About"
-    });
-};
+/* GET registeration page */
 
 const register = function(req, res) {
     res.render("register", {
@@ -13,6 +7,5 @@ const register = function(req, res) {
 };
 
 module.exports = {
-    about,
     register,
 };

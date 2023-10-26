@@ -14,6 +14,7 @@ html {
   font-family: inherit;
 }
 
+
 /* ===== Scrollbar CSS ===== */
 /* Firefox */
 * {
@@ -110,6 +111,17 @@ section .card .card-img {
   height: 225px;
 }
 
+section .card .card-title a {
+  font-size: 1rem;
+  color: black;
+  transition: color .5s;
+  text-decoration: none;
+}
+
+section .card .card-title a:hover {
+  color: rgb(1, 180, 228);
+}
+
 #banner .container {
   background-image: url("../images/banner-background.jpg");
   background-repeat: no-repeat;
@@ -133,6 +145,29 @@ section .card .card-img {
   text-align: center;
 }
 
+.poster_info_wrapper .poster-details {
+  margin-bottom: 24px;
+}
+
+.poster_info_wrapper .actions .action {
+  margin-right: 20px;
+  padding: 3px 0;
+  display: inline-block;
+}
+
+.poster_info_wrapper .actions .action.btn--circle {
+  /* background-color: rgb(3,37,65);
+  border-radius: 50%; */
+  /* width: auto; */
+}
+
+.poster_info_wrapper .actions .action a {
+  text-decoration: none;
+  color: #fff;
+  width: 46px;
+  height: 46px;
+}
+
 .poster_img {
   min-width: 300px;
   width: 300px;
@@ -153,4 +188,41 @@ section .card .card-img {
 .tagline + h3 {
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+.poster_facts {
+  font-size: 1rem;
+}
+
+.poster_facts .certification {
+  padding: .96px 4px 2.4px 4px;
+  border: 1px solid rgba(255,255,255,0.6);
+  border-radius: 2px;
+  margin-right: 7px;
+}
+
+.poster_facts .genres ul li {
+  margin-right: 6px
+}
+
+.poster_facts .genres ul li:first-child::before,
+.poster_facts .runtime::before {
+  content: "•";
+  width: 100%;
+  height: 100%;
+  align-content: center;
+  align-items: center;
+}
+
+#social .card {
+}
+
+#social .card .rating span {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+#social .card .rating a {
+  text-decoration: none;
+  color: #000;
 }

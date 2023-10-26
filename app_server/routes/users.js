@@ -1,9 +1,9 @@
 let express = require('express');
 let router = express.Router();
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+const ctrlOthers = require("../controllers/others");
+
+/* GET Registeration page */
+router.get("/register", ctrlOthers.register);
 
 module.exports = router;

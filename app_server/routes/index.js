@@ -3,17 +3,18 @@ const router = express.Router();
 
 
 const ctrlMovies = require("../controllers/movies");
-const ctrlOthers = require("../controllers/others");
+
 
 /* Movies Pages */
 
-router.get("", ctrlMovies.home);
-router.get("/movie", ctrlMovies.movieInfo);
-router.get("/movie/review/new", ctrlMovies.addReview);
+router.get("/", ctrlMovies.home);
+router.get('/movie/:id', ctrlMovies.movieInfo);
+router.get("/movie/favourite", ctrlMovies.favouriteMovies)
 
 /* Other Pages */
-router.get("/about", ctrlOthers.about);
-router.get("/register", ctrlOthers.register);
+
 
 
 module.exports = router;
+
+

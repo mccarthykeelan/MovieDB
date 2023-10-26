@@ -1,0 +1,6 @@
+.card.text-dark.border-0.ml-1
+  a(href=`movie/${movie.id}`).link
+    img.card-img(src=`/images/${movie.photoPath}`, alt='')
+  h2.card-title
+    a(href=`movie/${movie.id}`)= movie.title
+  p.release-date= movie.releaseDate

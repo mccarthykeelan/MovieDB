@@ -1,64 +1,80 @@
 extends layout
 
 block content
-    main.container-fluid.bg-dark.text-white
+    section.container-fluid.bg-dark.text-white
         .poster.py-3.container.mx-auto
             .row.justify-content-center
-                .col-4.poster_img
-                    img(src="images/mission-impossible.jpg", alt="Poster").w-100.rounded
+                .col-4.pb-3.poster_img
+                    img.w-100.rounded(src=`/images/${movie.photoPath}`, alt=movie.title)
                 .col-8.poster_info.d-flex.flex-column.justify-content-center
-                    .poster_info_wrapper
-                        .poster_title
-                        h2 Mission: Impossible - Dead Reckoning Part One
-                            span.release-date.text-secondary &nbsp;(2023)
-                        .poster_facts
-                            | These are the facts
+                    .poster_info_wrapper.text-center.text-md-start
+                        .poster-details 
+                            .poster_title.d-flex
+                                h2= movie.title
+                                span.release-date.text-secondary &nbsp;
+                            .poster_facts.d-flex
+                                span.certification= movie.certification
+                                span.release= movie.releaseDate
+                                span.genres
+                                    ul.d-flex.list-unstyled.mb-0.ps-3
+                                        each genre in movie.genres
+                                            li= genre
+                                span.runtime= movie.runtime
                         ul.actions.list-unstyled.d-flex
-                            li Action 1
-                            li Action 2
-                            li Action 3
-                            li Action 4
-                            li Action 5
-                            li Action 6
-                        h3.tagline We all share the same fate 
+                            li.action
+                                span= movie.userScore + " User Score"
+                            li.action.btn--circle
+                                a(href="/movie/favourite")
+                                    i.bi.bi-heart
+                            li.action.btn--circle
+                                a(href="#reviewModal", data-bs-toggle="modal", data-bs-target="#reviewModal")
+                                    i.bi.bi-pen-fill
+                            #reviewModal.modal.fade(tabindex='-1', aria-labelledby='reviewModalLabel', aria-hidden='true')
+                                .modal-dialog
+                                    .modal-content.bg-dark
+                                        .modal-header.border-dark
+                                            h5.modal-title#reviewModalLabel.modal-title Rate #{movie.title}
+                                            button(type='button', class='btn-close', data-bs-dismiss='modal', aria-label='Close').text-white
+                                        .modal-body.border-dark
+                                            form
+                                                .form-row
+                                                    .form-group.col-sm-12
+                                                        label(for='inputTitle') Review Title
+                                                        input#inputTitle.form-control(type='text' placeholder='Title')
+                                                    .form-group.col-sm-12.mt-2
+                                                        label(for='inputRating') Rating
+                                                        input#inputNumeric.form-control(type='number', min='0', max='10', step='1', value='0')
+                                                    .form-group.col-sm-12.mt-2
+                                                        label(for='inputContent') Review Text
+                                                        textarea#inputContent.form-control(type='text', placeholder='Review Text')
+                                                button.btn.btn-primary.mt-2.w-100(type='submit') Add Review
+
+                            li.action.btn--circle
+                                a(href="/movie/favourite")
+                                    i.bi.bi-star-fill
+                            li.action
+                                a(href="/movie/favourite")
+                                    i.bi.bi-play-fill Play Trailer
+                        h3.tagline= movie.tagline
                         h3.h3 Overview 
                         .overview
-                            p Ethan Hunt and his IMF team embark on their most dangerous mission yet: To track down a terrifying new weapon that threatens all of humanity before it falls into the wrong hands. With control of the future and the world's fate at stake and dark forces from Ethan's past closing in, a deadly race around the globe begins. Confronted by a mysterious, all-powerful enemy, Ethan must consider that nothing can matter more than his mission—not even the lives of those he cares about most.
+                            p= movie.overview
                             ol.people.list-unstyled.d-flex
-                                li.profile.pe-2
-                                    p.fw-bold.mb-0 Christopher McQuarrie
-                                    p.character Director, Writer 
-                                li.profile.pe-2
-                                    p.fw-bold.mb-0 Erik Jendresen
-                                    p.character Writer
+                                each person in movie.people
+                                    li.profile.pe-2
+                                        p.fw-bold.mb-0= person.name
+                                        p.character= person.role
+
                             
     section#social
         .container.mx-auto.px-3.py-4
-            .menu.d-flex
+            .menu.d-flex.flex-column
                 h3.me-5.mb-2 Social
-                ul.list-unstyled.d-flex.align-items-center.mb-0
+                ul.list-unstyled.d-flex.align-items-center.mb-0.pb-3
                     li.pb-1.me-2.border-bottom.border-black.border-5 Reviews
-                    li.pb-1.me-2 Discussions
-            .content 
-                    .review-container
-                        .review
-                            .card.border-secondary-subtle.px-3.py-3
-                                .grouped.d-flex
-                                    .avatar
-                                        img(src="", alt="Test")
-                                    .review-info
-                                        .title 
-                                            h3 Written by Brent Marchant on July 16, 2023
-                                        .d-flex 
-                                            .rating.bg-dark.text-white.rounded.py-1.px-2
-                                                span.star-icon 7.0
-                                            h5
-                                                | Written by 
-                                                a(href='#') MovieGuys
-                                                |  on October 14, 2023
-                                .review-content.pt-3
-                                    p A B grade action flick masquerading as a A list title. That's my reaction to Expendables 4. Yes, its a tired formula but at least previous Expendable films in this cheesy action franchise, showed a little genuine enthusiasm and included a cast of well worn but also well known, action stars. By contrast, the latest flick is easily forgettable with a good number of cast members, I've never heard of or seen on screen, infrequently. In summary, looks and behaves like a decidedly B grade action film with a sparse sprinkling of A grade action talent. Feels too, likes its going through the motions but not really delivering, if that makes sense.
+                    li.pb-1.me-2.border-bottom.border-white.border-5 Discussions
+                .content
+                    each review in movie.reviews
+                        include _includes/movie-review
 
-                                            
-                                        
-                                        
+                
