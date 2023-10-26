@@ -1,0 +1,51 @@
+extends layout
+
+block content
+    main.container-fluid.bg-dark.text-white
+        .poster.py-3.container.mx-auto
+            .row.justify-content-center
+                .col-4.poster_img
+                    img(src="images/mission-impossible.jpg", alt="Poster").w-100.rounded
+                .col-8.poster_info.d-flex.flex-column.justify-content-center
+                    .poster_info_wrapper
+                        .poster_title
+                        h2 Mission: Impossible - Dead Reckoning Part One
+                            span.release-date.text-secondary &nbsp;(2023)
+                        .poster_facts
+                            | These are the facts
+                        ul.actions.list-unstyled.d-flex
+                            li Action 1
+                            li Action 2
+                            li Action 3
+                            li Action 4
+                            li Action 5
+                            li Action 6
+                        h3.tagline We all share the same fate 
+                        h3.h3 Overview 
+                        .overview
+                            p Ethan Hunt and his IMF team embark on their most dangerous mission yet: To track down a terrifying new weapon that threatens all of humanity before it falls into the wrong hands. With control of the future and the world's fate at stake and dark forces from Ethan's past closing in, a deadly race around the globe begins. Confronted by a mysterious, all-powerful enemy, Ethan must consider that nothing can matter more than his mission—not even the lives of those he cares about most.
+                            ol.people.list-unstyled.d-flex
+                                li.profile.pe-2
+                                    p.fw-bold.mb-0 Christopher McQuarrie
+                                    p.character Director, Writer 
+                                li.profile.pe-2
+                                    p.fw-bold.mb-0 Erik Jendresen
+                                    p.character Writer
+                            
+
+
+    section#social
+        .menu
+            h3
+            ul
+                li Reviews
+        .content 
+                .review
+                    .card
+                        .grouped
+                            .avatar
+                                img(src="", alt="Test")
+                            .review-info 
+                            .rating
+                                span.star-icon 7.0
+                            h3 Written by Brent Marchant on July 16, 2023

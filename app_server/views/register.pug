@@ -1,0 +1,32 @@
+extends layout
+
+block content
+    .container
+        form.registeration_form(action="POST")
+            .form-title.mb-3
+                h2 Register Today
+            .row.mb-3
+                .col
+                    label(for="firstName") First Name 
+                    input#firstName.form-control(type="text" placeholder="First Name")
+                .col
+                    label(for="lastName") Last Name 
+                    input#firstName.form-control(type="text" placeholder="Last Name")
+            .row.mb-3
+                .col
+                    label(for="email") Email
+                    input#email.form-control(type="email" placeholder="Email Address")
+            .row.mb-3
+                .col
+                    label(for="username") Username
+                    input#email.form-control(type="text" placeholder="Username")
+            .row.mb-3
+                .col-md-6
+                    label(for="password") Password
+                    input#password.form-control(type="text" placeholder="Password")
+                .col-md-6
+                    label(for="passwordConfirmation") Confirm Password
+                    input#passwordConfirmation.form-control(type="text" placeholder="Confirm Password")
+            .row.mb-3
+                .col
+                    button.btn.btn-success.w-100(type="submit") Register
